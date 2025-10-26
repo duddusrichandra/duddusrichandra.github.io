@@ -1,0 +1,187 @@
+/* --- GLOBAL STYLES --- */
+:root {
+    --primary-color: #00bcd4; /* Cyan/Teal - Professional Tech Look */
+    --background-color: #121212; /* Dark Gray */
+    --text-color: #e0e0e0; /* Light Gray */
+    --card-background: #1e1e1e; /* Slightly lighter dark gray */
+    --font-sans: 'Fira Sans', sans-serif;
+    --font-mono: 'Roboto Mono', monospace;
+}
+
+/* Import professional fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #4dd0e1; /* Lighter hover color */
+}
+
+.section {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    text-align: center;
+    border-bottom: 2px solid var(--card-background);
+    padding-bottom: 10px;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    background: linear-gradient(rgba(18, 18, 18, 0.95), rgba(18, 18, 18, 0.8)), url('images/hero-bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.name {
+    font-family: var(--font-mono);
+    font-size: 3.5em;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.role {
+    font-family: var(--font-sans);
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-top: 10px;
+}
+
+.tagline {
+    font-size: 2.2em;
+    color: var(--text-color);
+    margin: 20px 0 30px;
+    line-height: 1.4;
+}
+
+.social-links i {
+    font-size: 1.8em;
+    margin: 0 15px;
+    color: #ffffff;
+    transition: color 0.3s;
+}
+
+.social-links i:hover {
+    color: var(--primary-color);
+}
+
+/* --- ABOUT SECTION --- */
+.about-summary {
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.visual-element img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.5); /* Glowing effect */
+}
+
+
+/* --- SKILLS SECTION --- */
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.skill-card {
+    background-color: var(--card-background);
+    padding: 30px;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 188, 212, 0.2);
+}
+
+.skill-card h4 {
+    font-size: 1.5em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.skill-card i {
+    margin-right: 10px;
+}
+
+/* --- PROJECTS SECTION --- */
+.project-card {
+    background-color: var(--card-background);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.project-card h4 a {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--card-background);
+    text-align: center;
+    padding: 20px;
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .name {
+        font-size: 2.5em;
+    }
+    .role, .tagline {
+        font-size: 1.2em;
+    }
+    .section {
+        padding: 40px 5%;
+    }
+}
